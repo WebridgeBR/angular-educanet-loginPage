@@ -1,15 +1,5 @@
-<mat-sidenav-container
-  class="example-container"
-  (backdropClick)="close('backdrop')"
->
-  <mat-sidenav
-    #sidenav
-    mode="side"
-    opened
-    class="sideNavMajorContainerStyles"
-    (keydown.escape)="close()"
-    disableClose
-  >
+<mat-sidenav-container class="example-container" (backdropClick)="close('backdrop')">
+  <mat-sidenav #sidenav mode="side" opened class="sideNavMajorContainerStyles" (keydown.escape)="close()" disableClose>
     <p>
       <button mat-button (click)="close()">
         <mat-icon matListIcon>menu</mat-icon>
@@ -39,9 +29,7 @@
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
           <mat-card-title>Reta Sistemas</mat-card-title>
-          <mat-card-subtitle
-            >Empresa desenvolvedora de softwares</mat-card-subtitle
-          >
+          <mat-card-subtitle>Empresa desenvolvedora de softwares</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
           <h3>

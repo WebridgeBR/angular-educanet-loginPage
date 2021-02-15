@@ -14,3 +14,16 @@
   background-image: url("https://lh3.googleusercontent.com/proxy/mcRBhdZIetazPefOJ5TwU0qO1UZcEow_fSaYCGgNojd55Es1VFhuVrz76FVOPuyTXzj1oHSujaCS3pf-HACNMw");
   background-size: cover;
 }
+.example-container ::-webkit-scrollbar-track {
+  background: #ff408190;
+}
+
+.example-container ::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+.example-container ::-webkit-scrollbar-thumb {
+  background: #c2bcbc;
+  border-radius: 10px;
+}
