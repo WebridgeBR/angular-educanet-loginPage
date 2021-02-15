@@ -1,0 +1,85 @@
+<mat-sidenav-container
+  class="example-container"
+  (backdropClick)="close('backdrop')"
+>
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    opened
+    class="sideNavMajorContainerStyles"
+    (keydown.escape)="close()"
+    disableClose
+  >
+    <p>
+      <button mat-button (click)="close()">
+        <mat-icon matListIcon>menu</mat-icon>
+      </button>
+    </p>
+    <h1 class="sideNavStyles">EDUCANET HOMOLOG</h1>
+
+    <mat-list>
+      <mat-list-item *ngFor="let menu of menuLinks">
+        <mat-icon matListIcon>{{menu.icon}}</mat-icon>
+        <h3 matLine>{{menu.menuTitle}}</h3>
+        <p matLine>
+          <small> {{menu.menuDescription}} </small>
+        </p>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content style="background-color: #e6efff;">
+    <p>
+      <button mat-button (click)="sidenav.open()">
+        <mat-icon malListIcon>menu</mat-icon>
+      </button>
+    </p>
+    <div style="display: flex; justify-content: center;">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Reta Sistemas</mat-card-title>
+          <mat-card-subtitle
+            >Empresa desenvolvedora de softwares</mat-card-subtitle
+          >
+        </mat-card-header>
+        <mat-card-content>
+          <h3>
+            Identificação<br />
+            do Usuário
+          </h3>
+          <form class="login_form">
+            <label>Usuário</label>
+            <input type="text" placeholder="ex: RSI" />
+            <label>Senha</label>
+            <input type="text" placeholder="ex: RSI" />
+            <small>Esqueceu a senha?</small>
+            <small>Alterar a senha</small>
+            <label>Empresa</label>
+            <select>
+              <option>Prefeitura Municial de Betim</option>
+            </select>
+            <label>Tipo Unidade Educacional</label>
+            <select>
+              <option>Escolas Municipais</option>
+            </select>
+            <label>Unidade Educacional</label>
+            <select>
+              <option>E M ANTONIO D'ASSIS MARTINS</option>
+            </select>
+          </form>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Buscar Usuário</button>
+          <button mat-button>Conectar</button>
+          <button mat-button>Limpar</button>
+          <button mat-button>Alterar Dados</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- Copyright 2020 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->

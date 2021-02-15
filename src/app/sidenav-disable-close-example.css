@@ -1,0 +1,16 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.example-card {
+  max-width: 400px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+.example-header-image {
+  background-image: url("https://lh3.googleusercontent.com/proxy/mcRBhdZIetazPefOJ5TwU0qO1UZcEow_fSaYCGgNojd55Es1VFhuVrz76FVOPuyTXzj1oHSujaCS3pf-HACNMw");
+  background-size: cover;
+}

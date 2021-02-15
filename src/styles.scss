@@ -1,0 +1,130 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+$sideNavBackgroundColor: #020f7a;
+$whiteFontColor: #fff;
+
+$sideNavTitle: "Poppins";
+$sideNavFontSizeTitle: 18px;
+$sideNavTitlePadding: 7px;
+body {
+  font-family: Segoe UI, Arial, sans-serif;
+  margin: 0;
+  padding: 30px;
+}
+.version-info {
+  font-size: 8pt;
+  float: right;
+  margin: 8px;
+}
+
+.sideNavStyles {
+  font-family: $sideNavTitle;
+  font-size: $sideNavFontSizeTitle;
+  padding: $sideNavTitlePadding;
+}
+
+.sideNavMajorContainerStyles {
+  background-color: $sideNavBackgroundColor;
+  color: $whiteFontColor;
+  font-family: $sideNavTitle;
+  &::-webkit-scrollbar {
+    height: 12px !important;
+  }
+}
+
+mat-list {
+  mat-list-item {
+    mat-icon {
+      color: $whiteFontColor;
+    }
+    h3 {
+      font-family: $sideNavTitle;
+      color: $whiteFontColor;
+    }
+    p {
+      font-size: $sideNavTitlePadding;
+      font-family: "Segoe UI";
+      color: $whiteFontColor;
+    }
+    &:hover {
+      background-color: $whiteFontColor;
+      border-radius: 10px;
+      cursor: pointer;
+      mat-icon,
+      h3,
+      p {
+        color: $sideNavBackgroundColor;
+      }
+    }
+  }
+}
+mat-card-title {
+  font-family: $sideNavTitle;
+  text-transform: uppercase;
+}
+mat-card-content {
+  form {
+    label {
+      font-family: $sideNavTitle;
+      font-size: 12px;
+      display: block;
+      padding-top: 10px;
+    }
+    input {
+      width: 100%;
+      border: 1px solid lightgrey;
+      padding: 7px;
+      border-radius: 10px;
+      &:focus {
+        outline-style: none;
+      }
+    }
+    small {
+      display: flex;
+      padding-top: 10px;
+      justify-content: flex-end;
+      cursor: pointer;
+      color: $sideNavBackgroundColor;
+    }
+    select {
+      width: 100%;
+      padding: 7px;
+      font-family: $sideNavTitle;
+      border-radius: 10px;
+      border: 1px solid lightgrey;
+      &:focus {
+        outline-style: none;
+      }
+    }
+  }
+  h3 {
+    font-family: $sideNavTitle;
+    font-size: 15px;
+    color: grey;
+    font-weight: 400;
+  }
+}
+mat-card {
+  mat-card-actions {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    button {
+      background-color: transparent;
+      border: 1px solid $sideNavBackgroundColor !important;
+      color: $sideNavBackgroundColor !important;
+      font-family: $sideNavTitle !important;
+      margin-top: 5px !important;
+      font-size: 12px !important;
+      border-radius: 10px !important;
+      &:hover {
+        background-color: $sideNavBackgroundColor !important;
+        color: $whiteFontColor !important;
+      }
+    }
+  }
+}
+
+/**  Copyright 2020 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license */
