@@ -62,7 +62,11 @@ export class SidenavDisableCloseExample {
     }
   ];
 
-  close(reason: string) {
+  constructor() {
+
+  }
+
+  public close(reason?: string): void {
     this.sidenav.close();
   }
 }

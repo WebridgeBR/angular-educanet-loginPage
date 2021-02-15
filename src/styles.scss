@@ -33,6 +33,20 @@ body {
   }
 }
 
+.sideNavMajorContainerStyles ::-webkit-scrollbar-track {
+  background: #ff408190;
+}
+
+.sideNavMajorContainerStyles ::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+.sideNavMajorContainerStyles ::-webkit-scrollbar-thumb {
+  background: #c2bcbc;
+  border-radius: 10px;
+}
+
 mat-list {
   mat-list-item {
     mat-icon {
