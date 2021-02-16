@@ -1,5 +1,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
 
 $sideNavBackgroundColor: #020f7a;
 $whiteFontColor: #fff;
@@ -17,22 +19,33 @@ body {
   float: right;
   margin: 8px;
 }
-
+.educanetBlueBgTheme {
+  background-color: $sideNavBackgroundColor;
+  color: $whiteFontColor;
+}
 .sideNavStyles {
   font-family: $sideNavTitle;
   font-size: $sideNavFontSizeTitle;
   padding: $sideNavTitlePadding;
 }
-
 .sideNavMajorContainerStyles {
   background-color: $sideNavBackgroundColor;
   color: $whiteFontColor;
   font-family: $sideNavTitle;
-  &::-webkit-scrollbar {
-    height: 12px !important;
-  }
 }
-
+.sideNavMajorContainerStyles ::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+.sideNavMajorContainerStyles ::-webkit-scrollbar-track {
+  background: $sideNavBackgroundColor;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+.sideNavMajorContainerStyles ::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 10px;
+}
 mat-list {
   mat-list-item {
     mat-icon {
@@ -124,7 +137,78 @@ mat-card {
     }
   }
 }
+mat-sidenav-content {
+  p {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 20px;
+    span {
+      font-weight: 800;
+    }
+    small {
+      font-size: 13px;
+      font-family: "Roboto";
+    }
+  }
+  label {
+    font-family: "Montserrat";
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -0.6px;
+    display: block;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  input {
+    border: 1px solid #e3e5e8;
+    padding: 10px;
+    font-family: "Montserrat";
+    font-size: 13px;
+    margin-top: 3px;
+    margin-bottom: 20px;
 
+    &:focus {
+      outline-style: none;
+    }
+  }
+  select {
+    border: 1px solid #e3e5e8;
+    padding: 10px;
+    font-family: "Montserrat";
+    font-size: 13px;
+    margin-top: 3px;
+    margin-bottom: 20px;
+
+    &:focus {
+      outline-style: none;
+    }
+  }
+}
+.connect_intro_cards {
+  display: flex;
+  justify-content: center;
+  button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: $sideNavBackgroundColor;
+    color: $whiteFontColor;
+    font-family: "Montserrat";
+    font-size: 15px;
+    border: none;
+    border-radius: none;
+    padding: 10px;
+    &:focus {
+      outline-style: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  @media (max-width: 800px) {
+    display: block;
+  }
+}
 /**  Copyright 2020 Google LLC. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
     can be found in the LICENSE file at http://angular.io/license */
