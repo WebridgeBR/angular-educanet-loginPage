@@ -25,8 +25,9 @@ body {
 }
 .sideNavStyles {
   font-family: $sideNavTitle;
-  font-size: $sideNavFontSizeTitle;
+  font-size: 20px;
   padding: $sideNavTitlePadding;
+  padding-left: 10px;
 }
 .sideNavMajorContainerStyles {
   background-color: $sideNavBackgroundColor;
@@ -206,6 +207,15 @@ mat-sidenav-content {
       outline-style: none;
     }
   }
+  @media (max-width: 800px) {
+    input,
+    select {
+      width: 100%;
+    }
+    div {
+      padding-bottom: 20px;
+    }
+  }
 }
 .connect_intro_cards {
   display: flex;
@@ -237,10 +247,21 @@ mat-sidenav-content {
       &:hover {
         color: $sideNavBackgroundColor;
       }
+      mat-icon {
+        font-size: 14px;
+      }
     }
   }
   @media (max-width: 800px) {
     display: block;
+    small {
+      a {
+        padding-top: 10px !important;
+      }
+    }
+    button {
+      width: 100%;
+    }
   }
 }
 /**  Copyright 2020 Google LLC. All Rights Reserved.

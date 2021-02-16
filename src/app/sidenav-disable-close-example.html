@@ -1,67 +1,97 @@
-<mat-sidenav-container class="example-container" (backdropClick)="close('backdrop')">
-	<mat-sidenav #sidenav mode="side" opened class="sideNavMajorContainerStyles" (keydown.escape)="close()"
-		disableClose>
-		<p>
-			<button mat-button (click)="close()">
+<mat-sidenav-container
+  class="example-container"
+  (backdropClick)="close('backdrop')"
+>
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    class="sideNavMajorContainerStyles"
+    (keydown.escape)="close()"
+    disableClose
+  >
+    <p>
+      <button mat-button (click)="close()">
         <mat-icon matListIcon>menu</mat-icon>
       </button>
-		</p>
-		<h1 class="sideNavStyles">EDUCANET HOMOLOG</h1>
-		<mat-icon matListIcon>search</mat-icon><input #myInput placeholder="Pesquisar sessão..." (input)="filterItem(myInput.value)" >
-		<mat-list>
-			<mat-list-item *ngFor="let menu of menuLinks">
-				<mat-icon matListIcon>{{menu.icon}}</mat-icon>
-				<h3 matLine>{{menu.menuTitle}}</h3>
-				<p matLine>
-					<small> {{menu.menuDescription}} </small>
-				</p>
-			</mat-list-item>
-		</mat-list>
-	</mat-sidenav>
+    </p>
+    <h1 class="sideNavStyles">EDUCANET <small>HOMOLOG</small></h1>
+    <mat-icon matListIcon>search</mat-icon
+    ><input
+      #myInput
+      placeholder="Pesquisar sessão..."
+      (input)="filterItem(myInput.value)"
+    />
+    <mat-list>
+      <mat-list-item *ngFor="let menu of menuLinks">
+        <mat-icon matListIcon>{{menu.icon}}</mat-icon>
+        <h3 matLine>{{menu.menuTitle}}</h3>
+        <p matLine>
+          <small> {{menu.menuDescription}} </small>
+        </p>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
 
-	<mat-sidenav-content>
-		<div class="educanetBlueBgTheme" style="padding: 20px">
-			<button mat-button (click)="sidenav.open()">
+  <mat-sidenav-content>
+    <div class="educanetBlueBgTheme" style="padding: 20px">
+      <button mat-button (click)="sidenav.open()">
         <mat-icon malListIcon>menu</mat-icon>
       </button>
-		</div>
-		<div style="display: flex; justify-content: center;">
-			<div style="display: block;">
-				<img alt="reta_logo" src="https://stackblitz.com/files/angular-mczbtj/github/WebridgeBR/angular-educanet-loginPage/master/src/assets/images/image.png" width="100px" height="100px" style="margin-bottom: 0px; padding-bottom: 0px;">
-				<p style="margin-top: 0px; padding-top: 0px;">
-					<span>Olá usuario</span>,<br> bem vindo novamente!<br>
-					<small>Identificação do usuário</small>
-				</p>
-				<div class="connect_intro_cards">
-					<div style="padding: 5px;">
-						<label>Nome de usuário</label>
-						<input type="text"/>
-						<label>Insira a senha</label>
-						<input type="password"/><br>
-						<button>CONECTAR</button>
-						<small style="font-family: 'Roboto';"><a>💡 Esqueceu a senha?</a></small><br>
-						<small style="font-family: 'Roboto';"><a>Desejo alterar a minha senha</a></small>
-					</div>
-					<div style="padding: 5px;">
-						<label>Empresa</label>
-						<select>
+    </div>
+    <div style="display: flex; justify-content: center;">
+      <div style="display: block;">
+        <img
+          alt="reta_logo"
+          src="https://stackblitz.com/files/angular-mczbtj/github/WebridgeBR/angular-educanet-loginPage/master/src/assets/images/image.png"
+          width="100px"
+          height="100px"
+          style="margin-bottom: 0px; padding-bottom: 0px;"
+        />
+        <p style="margin-top: 0px; padding-top: 0px;">
+          <span>Olá usuario</span>,<br />
+          bem vindo novamente!<br />
+          <small>Identificação do usuário</small>
+        </p>
+        <div class="connect_intro_cards">
+          <div style="padding: 5px;">
+            <label>Nome de usuário</label>
+            <input type="text" />
+            <label>Insira a senha</label>
+            <input type="password" /><br />
+            <button>CONECTAR</button><br />
+            <small style="font-family: 'Roboto';"
+              ><a
+                ><mat-icon matListIcon>lock</mat-icon> Esqueceu a senha?</a
+              ></small
+            ><br />
+            <small style="font-family: 'Roboto';"
+              ><a>Desejo alterar a minha senha</a></small
+            ><br /><br />
+          </div>
+          <div style="padding: 5px;">
+            <label>Empresa</label>
+            <select>
               <option>PREFEITURA MUNICIPAL DE BETIM</option>
             </select>
-						<label>Tipo Unidade Educacional</label>
-						<select>
+            <label>Tipo Unidade Educacional</label>
+            <select>
               <option>ESCOLAS MUNICIPAIS</option>
             </select>
-						<label>Unidade Educacional</label>
-						<select>
+            <label>Unidade Educacional</label>
+            <select>
               <option>E M ANTONIO D'ASSIS MARTINS</option>
             </select>
-						<button style="font-size: 12px; margin-top: 5px;  ">BUSCAR USUÁRIO</button>
-						<button style="font-size: 12px; margin-top: 5px;  ">ALTERAR DADOS</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</mat-sidenav-content>
+            <button style="font-size: 12px; margin-top: 5px;  ">
+              BUSCAR USUÁRIO
+            </button>
+            <button style="font-size: 12px; margin-top: 5px;  ">
+              ALTERAR DADOS
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
 </mat-sidenav-container>
 
 <!-- Copyright 2020 Google LLC. All Rights Reserved.

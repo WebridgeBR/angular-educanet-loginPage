@@ -67,7 +67,7 @@ export class SidenavDisableCloseExample {
   }
   filterItem(value: string) {
     if (value !== "") {
-      this.menuLinks = this.menuLinks.filter(
+      this.menuLinks = this.menuLinksBackup.filter(
         item => item.menuTitle.toLowerCase().indexOf(value.toLowerCase()) > -1
       );
     } else {
