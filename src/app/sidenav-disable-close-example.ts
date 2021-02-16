@@ -61,9 +61,18 @@ export class SidenavDisableCloseExample {
       icon: "money"
     }
   ];
-
-  close(reason: string) {
+  menuLinksBackup = this.menuLinks;
+  close() {
     this.sidenav.close();
+  }
+  filterItem(value: string) {
+    if (value !== "") {
+      this.menuLinks = this.menuLinks.filter(
+        item => item.menuTitle.toLowerCase().indexOf(value.toLowerCase()) > -1
+      );
+    } else {
+      this.menuLinks = this.menuLinksBackup;
+    }
   }
 }
 

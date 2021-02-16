@@ -46,6 +46,29 @@ body {
   background: #fff;
   border-radius: 10px;
 }
+mat-sidenav {
+  min-width: 350px;
+  input {
+    padding: 10px;
+    width: 70%;
+    margin-left: 1vh;
+    font-family: "Montserrat";
+    border-radius: 5px;
+    border: 1px solid #fff;
+    &:focus {
+      outline-style: none;
+    }
+  }
+  mat-icon {
+    width: 30%;
+    vertical-align: middle;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @media (min-width: 320px) and(max-width: 550px) {
+    min-width: 350px;
+  }
+}
 mat-list {
   mat-list-item {
     mat-icon {
@@ -166,7 +189,7 @@ mat-sidenav-content {
     font-size: 13px;
     margin-top: 3px;
     margin-bottom: 20px;
-
+    border-radius: 10px;
     &:focus {
       outline-style: none;
     }
@@ -178,7 +201,7 @@ mat-sidenav-content {
     font-size: 13px;
     margin-top: 3px;
     margin-bottom: 20px;
-
+    border-radius: 10px;
     &:focus {
       outline-style: none;
     }
@@ -195,14 +218,25 @@ mat-sidenav-content {
     color: $whiteFontColor;
     font-family: "Montserrat";
     font-size: 15px;
-    border: none;
-    border-radius: none;
+    border: 1px solid $sideNavBackgroundColor;
+    border-radius: 10px;
     padding: 10px;
     &:focus {
       outline-style: none;
     }
     &:hover {
       cursor: pointer;
+      background-color: transparent;
+      border: 1px solid $sideNavBackgroundColor;
+      color: $sideNavBackgroundColor;
+    }
+  }
+  small {
+    a {
+      cursor: pointer !important;
+      &:hover {
+        color: $sideNavBackgroundColor;
+      }
     }
   }
   @media (max-width: 800px) {

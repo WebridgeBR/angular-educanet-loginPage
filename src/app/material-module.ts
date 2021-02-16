@@ -7,6 +7,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatSidenavModule } from "@angular/material/sidenav";
+import { FormsModule } from "@angular/forms";
 @NgModule({
   exports: [
     MatButtonModule,
@@ -16,7 +17,8 @@ import { MatSidenavModule } from "@angular/material/sidenav";
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule
   ]
 })
 export class DemoMaterialModule {}

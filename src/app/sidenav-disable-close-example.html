@@ -7,7 +7,7 @@
       </button>
 		</p>
 		<h1 class="sideNavStyles">EDUCANET HOMOLOG</h1>
-
+		<mat-icon matListIcon>search</mat-icon><input #myInput placeholder="Pesquisar sessão..." (input)="filterItem(myInput.value)" >
 		<mat-list>
 			<mat-list-item *ngFor="let menu of menuLinks">
 				<mat-icon matListIcon>{{menu.icon}}</mat-icon>
@@ -20,15 +20,16 @@
 	</mat-sidenav>
 
 	<mat-sidenav-content>
-		<div class="educanetBlueBgTheme">
+		<div class="educanetBlueBgTheme" style="padding: 20px">
 			<button mat-button (click)="sidenav.open()">
         <mat-icon malListIcon>menu</mat-icon>
       </button>
 		</div>
 		<div style="display: flex; justify-content: center;">
 			<div style="display: block;">
-				<p>
-					<span>Boa tarde</span>,<br> bem vindo novamente!<br>
+				<img alt="reta_logo" src="https://stackblitz.com/files/angular-mczbtj/github/WebridgeBR/angular-educanet-loginPage/master/src/assets/images/image.png" width="100px" height="100px" style="margin-bottom: 0px; padding-bottom: 0px;">
+				<p style="margin-top: 0px; padding-top: 0px;">
+					<span>Olá usuario</span>,<br> bem vindo novamente!<br>
 					<small>Identificação do usuário</small>
 				</p>
 				<div class="connect_intro_cards">
